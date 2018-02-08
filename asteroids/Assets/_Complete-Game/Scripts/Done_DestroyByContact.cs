@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Done_DestroyByContact : MonoBehaviour
@@ -27,16 +27,19 @@ public class Done_DestroyByContact : MonoBehaviour
 		{
 			return;
 		}
-
-		if (explosion != null)
+		
+		if (other.tag == "Untagged")
 		{
 			Instantiate(explosion, transform.position, transform.rotation);
+			Destroy (this.gameObject);
 		}
 
 		if (other.tag == "Player")
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+			Destroy (other.gameObject);
 			gameController.GameOver();
+			
 		}
 		
 		gameController.AddScore(scoreValue);
