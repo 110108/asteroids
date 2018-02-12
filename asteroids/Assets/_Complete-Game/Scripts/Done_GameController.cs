@@ -11,6 +11,8 @@ public class Done_GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+
+	private int cyka;
 	
 //	public GUIText scoreText;
 //	public GUIText restartText;
@@ -49,20 +51,23 @@ public class Done_GameController : MonoBehaviour
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
+//				cyka = (5);
 				GameObject hazard = hazards;
-				int cyka = new int (Random (0, 9));
+				cyka = (Random.Range(0, 10));
 				if(cyka==0){
 					Vector3 playerPos = player.transform.position;
+					playerPos.z = +10; 
 					Vector3 playerDirection = player.transform.forward;
 					Quaternion playerRotation = player.transform.rotation;
 					float spawnDistance = 10;
-
 					Vector3 spawnPos = playerPos + playerDirection*spawnDistance;
 					Quaternion spawnRotation = Quaternion.identity;
 					Instantiate (hazard, spawnPos, spawnRotation);
 				}
 				else{
-					Vector3 spawnPosition= new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (5,spawnValues.y));
+					Vector3 playerPos = player.transform.position;
+					Vector3 spawncalc= new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (10,spawnValues.z));
+					Vector3 spawnPosition = playerPos + spawncalc;
 					Quaternion spawnRotation = Quaternion.identity;
 					Instantiate (hazard, spawnPosition, spawnRotation);
 				}
