@@ -5,6 +5,7 @@ using System.Collections;
 public class Done_GameController : MonoBehaviour
 {
 	public GameObject hazards;
+	public GameObject player;
 	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
@@ -49,15 +50,19 @@ public class Done_GameController : MonoBehaviour
 			for (int i = 0; i < hazardCount; i++)
 			{
 				GameObject hazard = hazards;
-				new int cyka=Random(0,9);
-				Vector3 spawnPosition = new Vector3;
+				int cyka = new int (Random (0, 9));
 				if(cyka==0){
-				spawnPosition= (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (5,spawnValues.y));
-				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate (hazard, spawnPosition, spawnRotation);
+					Vector3 playerPos = player.transform.position;
+					Vector3 playerDirection = player.transform.forward;
+					Quaternion playerRotation = player.transform.rotation;
+					float spawnDistance = 10;
+
+					Vector3 spawnPos = playerPos + playerDirection*spawnDistance;
+					Quaternion spawnRotation = Quaternion.identity;
+					Instantiate (hazard, spawnPos, spawnRotation);
 				}
 				else{
-					spawnPosition= (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (5,spawnValues.y));
+					Vector3 spawnPosition= new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (5,spawnValues.y));
 					Quaternion spawnRotation = Quaternion.identity;
 					Instantiate (hazard, spawnPosition, spawnRotation);
 				}
