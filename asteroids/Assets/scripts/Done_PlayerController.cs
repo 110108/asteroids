@@ -37,6 +37,6 @@ public class Done_PlayerController : MonoBehaviour
 		Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
 		GetComponent<Rigidbody>().velocity = movement * speed;
 		
-		GetComponent<Rigidbody>().rotation = Quaternion.Euler (GetComponent<Rigidbody>().velocity.y * -tilt,GetComponent<Rigidbody>().velocity.z * -tilt , GetComponent<Rigidbody>().velocity.x * -tilt);
+		GetComponent<Rigidbody>().rotation = Quaternion.Euler (GetComponent<Rigidbody>().velocity.y * -tilt,-(GetComponent<Rigidbody>().velocity.x * -tilt)/2 , GetComponent<Rigidbody>().velocity.x * -tilt);
 	}
 }
