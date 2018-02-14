@@ -53,7 +53,7 @@ public class Done_GameController : MonoBehaviour
 			{
 //				cyka = (5);
 				GameObject hazard = hazards;
-				cyka = (Random.Range(0, 10));
+				cyka = (Random.Range(0, 30));
 				if(cyka==0){
 					Vector3 playerPos = player.transform.position;
 					playerPos.z = +10; 
