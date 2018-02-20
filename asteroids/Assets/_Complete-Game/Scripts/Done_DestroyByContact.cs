@@ -23,7 +23,7 @@ public class Done_DestroyByContact : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Boundary" || other.tag == "Enemy")
+		if (other.tag == "Boundary" || other.tag == "Enemy" || other.tag == "ship")
 		{
 			return;
 		}
@@ -38,8 +38,11 @@ public class Done_DestroyByContact : MonoBehaviour
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 			Destroy (other.gameObject);
-//			gameController.GameOver();
-			
+		}
+
+		if (other.tag == "")
+		{
+			return;
 		}
 		
 //		gameController.AddScore(scoreValue);

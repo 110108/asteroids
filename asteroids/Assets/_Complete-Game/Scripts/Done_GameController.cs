@@ -53,7 +53,7 @@ public class Done_GameController : MonoBehaviour
 			{
 //				cyka = (5);
 				GameObject hazard = hazards;
-				cyka = (Random.Range(0, 30));
+				cyka = (Random.Range(0, 40));
 				if(cyka==0){
 					Vector3 playerPos = player.transform.position;
 					playerPos.z = +10; 
@@ -67,7 +67,7 @@ public class Done_GameController : MonoBehaviour
 				else{
 					Vector3 playerPos = player.transform.position;
 					Vector3 spawncalc= new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (10,spawnValues.z));
-					Vector3 spawnPosition = playerPos + spawncalc;
+					Vector3 spawnPosition = spawncalc;
 					Quaternion spawnRotation = Quaternion.identity;
 					Instantiate (hazard, spawnPosition, spawnRotation);
 				}
