@@ -66,7 +66,7 @@ public class Done_GameController : MonoBehaviour
 				}
 				else{
 					Vector3 playerPos = player.transform.position;
-					Vector3 spawncalc= new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y,spawnValues.y), Random.Range (10,spawnValues.z));
+					Vector3 spawncalc= new Vector3 (Random.Range (playerPos.x-spawnValues.x, playerPos.x+spawnValues.x), Random.Range (playerPos.y-spawnValues.y,playerPos.y+spawnValues.y), Random.Range (playerPos.z+10,playerPos.z+spawnValues.z));
 					Vector3 spawnPosition = spawncalc;
 					Quaternion spawnRotation = Quaternion.identity;
 					Instantiate (hazard, spawnPosition, spawnRotation);
