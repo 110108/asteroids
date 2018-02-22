@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 683, y: 713}
-  m_MaxSize: {x: 14004, y: 18063}
+  m_MinSize: {x: 683, y: 692}
+  m_MaxSize: {x: 14004, y: 18042}
   vertical: 1
-  controlID: 5586
+  controlID: 14745
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 588
-  m_MinSize: {x: 683, y: 442}
-  m_MaxSize: {x: 12008, y: 8042}
+  m_MinSize: {x: 683, y: 421}
+  m_MaxSize: {x: 12008, y: 8021}
   vertical: 0
-  controlID: 5445
+  controlID: 14746
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,10 +145,10 @@ MonoBehaviour:
     y: 0
     width: 1107
     height: 588
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 5361
+  controlID: 14648
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,8 +167,8 @@ MonoBehaviour:
     y: 0
     width: 1107
     height: 295
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -226,14 +226,14 @@ MonoBehaviour:
     width: 1105
     height: 272
   m_SceneLighting: 1
-  lastFramingTime: 125.9387883382264
+  lastFramingTime: 2515.621213932991
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.66155094, y: 0, z: 0.08908652}
+    m_Target: {x: 0.60703266, y: -1.3275372, z: -0.9292753}
     speed: 2
-    m_Value: {x: 0.66155094, y: 0, z: 0.08908652}
+    m_Value: {x: 0.60703266, y: -1.3275372, z: -0.9292753}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -256,13 +256,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.6670784, y: -0.24269143, z: 0.24517278, w: 0.6603033}
+    m_Target: {x: -0.29977995, y: 0.01490396, z: -0.0046753474, w: -0.95388055}
     speed: 2
-    m_Value: {x: -0.6670783, y: 0.24269143, z: -0.24517278, w: -0.6603033}
+    m_Value: {x: -0.29977995, y: 0.01490396, z: -0.0046753474, w: -0.95388055}
   m_Size:
-    m_Target: 17.416647
+    m_Target: 9.457579
     speed: 2
-    m_Value: 17.416647
+    m_Value: 9.457579
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -326,9 +326,9 @@ MonoBehaviour:
     height: 567
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc42f5ff
-    m_LastClickedID: -703748
-    m_ExpandedIDs: e8fbffff0000000098260000b2260000
+    m_SelectedIDs: fc37f7ff
+    m_LastClickedID: -575492
+    m_ExpandedIDs: 3a97f7ff3ad6faff5234feffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_MinSize: {x: 334, y: 271}
   m_MaxSize: {x: 14004, y: 10021}
   vertical: 0
-  controlID: 5587
+  controlID: 14671
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -529,18 +529,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Models
+    - Assets/_Complete-Game/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models
+  - Assets/_Complete-Game/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\110108\Documents\GitHub\asteroids\asteroids
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 13}
-    m_SelectedIDs: 98250000
-    m_LastClickedID: 9624
+    m_SelectedIDs: 38250000
+    m_LastClickedID: 9528
     m_ExpandedIDs: 00000000bc2400005a250000a62500002626000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -594,9 +594,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fc42f5ff
-    m_LastClickedInstanceID: -703748
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: fc37f7ff
+    m_LastClickedInstanceID: -575492
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: ee240000c4270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
