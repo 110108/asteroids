@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -14,9 +15,9 @@ public class Done_GameController : MonoBehaviour
 
 	private int cyka;
 	
-	public GUIText scoreText;
-	public GUIText restartText;
-	public GUIText gameOverText;
+	public Text scoreText;
+	public Text restartText;
+	public Text gameOverText;
 	
 	private bool gameOver;
 	private bool restart;
@@ -35,6 +36,10 @@ public class Done_GameController : MonoBehaviour
 	
 	void Update ()
 	{
+		if (player == null)
+		{
+			restart = true;
+		}
 		if (restart)
 		{
 			if (Input.GetKeyDown (KeyCode.R))

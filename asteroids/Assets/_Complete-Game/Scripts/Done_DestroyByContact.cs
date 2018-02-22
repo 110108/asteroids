@@ -40,7 +40,7 @@ public class Done_DestroyByContact : MonoBehaviour
 			Destroy (other.gameObject);
 		}
 		
-//		gameController.AddScore(scoreValue);
+		gameController.AddScore(scoreValue);
 		Destroy (other.gameObject);
 		Destroy (gameObject);
 	}
