@@ -16,10 +16,11 @@ public class Done_GameController : MonoBehaviour
 	private int cyka;
 	
 	public Text scoreText;
+	public Text lives;
 	public Text restartText;
 	public Text gameOverText;
-	
-	private bool gameOver;
+	public bool gameOver;
+
 	private bool restart;
 	private int score;
 	
@@ -48,17 +49,17 @@ public class Done_GameController : MonoBehaviour
 			}
 		}
 	}
-	
+
 	IEnumerator SpawnWaves ()
 	{
 		yield return new WaitForSeconds (startWait);
-		while (true)
+		while (gameOver==false)
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
 				GameObject hazard = hazards;
 				cyka = (Random.Range(0, 40));
-				if(cyka==0){
+				if(cyka==0 && gameOver==false){
 					Vector3 playerPos = player.transform.position;
 					playerPos.z = +10; 
 					Vector3 playerDirection = player.transform.forward;
@@ -69,11 +70,14 @@ public class Done_GameController : MonoBehaviour
 					Instantiate (hazard, spawnPos, spawnRotation);
 				}
 				else{
-					Vector3 playerPos = player.transform.position;
-					Vector3 spawncalc= new Vector3 (Random.Range (playerPos.x-spawnValues.x, playerPos.x+spawnValues.x), Random.Range (playerPos.y-spawnValues.y,playerPos.y+spawnValues.y), Random.Range (playerPos.z+10,playerPos.z+spawnValues.z));
-					Vector3 spawnPosition = spawncalc;
-					Quaternion spawnRotation = Quaternion.identity;
-					Instantiate (hazard, spawnPosition, spawnRotation);
+					if (gameOver == false) 
+					{
+						Vector3 playerPos = player.transform.position;
+						Vector3 spawncalc = new Vector3 (Random.Range (playerPos.x - spawnValues.x, playerPos.x + spawnValues.x), Random.Range (playerPos.y - spawnValues.y, playerPos.y + spawnValues.y), Random.Range (playerPos.z + 10, playerPos.z + spawnValues.z));
+						Vector3 spawnPosition = spawncalc;
+						Quaternion spawnRotation = Quaternion.identity;
+						Instantiate (hazard, spawnPosition, spawnRotation);
+					}
 				}
 				yield return new WaitForSeconds (spawnWait);
 			}
@@ -87,7 +91,7 @@ public class Done_GameController : MonoBehaviour
 			}
 		}
 	}
-	
+
 	public void AddScore (int newScoreValue)
 	{
 		score += newScoreValue;
