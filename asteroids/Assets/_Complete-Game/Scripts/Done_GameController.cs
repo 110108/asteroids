@@ -16,10 +16,11 @@ public class Done_GameController : MonoBehaviour
 	private int cyka;
 	
 	public Text scoreText;
-	public Text lives;
+	//public Text livesText;
 	public Text restartText;
 	public Text gameOverText;
 	public bool gameOver;
+//	public int lives;
 
 	private bool restart;
 	private int score;
@@ -101,11 +102,13 @@ public class Done_GameController : MonoBehaviour
 	void UpdateScore ()
 	{
 		scoreText.text = "Score: " + score;
+//		livesText.text = "Lives: " + lives;
 	}
 	
 	public void GameOver ()
 	{
 		gameOverText.text = "Game Over!";
 		gameOver = true;
+//		lives--;
 	}
 }
